@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
@@ -74,6 +75,7 @@ export default function RootLayout({
             <Cursor />
               <ThemedParticles className="fixed inset-0 -z-10 pointer-events-none"/>
             {children}
+            <Analytics/>
           </main>
         </ThemeProvider>
       </body>
