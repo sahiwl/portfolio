@@ -18,8 +18,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(@types/react@18.3.27)(react@19.2.3)
       '@next/mdx':
-        specifier: ^15.5.9
-        version: 15.5.9(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@18.3.27)(react@19.2.3))
+        specifier: ^16.0.10
+        version: 16.0.10(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@18.3.27)(react@19.2.3))
       '@tailwindcss/typography':
         specifier: ^0.5.19
         version: 0.5.19(tailwindcss@4.1.18)
@@ -383,8 +383,8 @@ packages:
   '@next/env@16.0.10':
     resolution: {integrity: sha512-8tuaQkyDVgeONQ1MeT9Mkk8pQmZapMKFh5B+OrFUlG3rVmYTXcXlBetBgTurKXGaIZvkoqRT9JL5K3phXcgang==}
 
-  '@next/mdx@15.5.9':
-    resolution: {integrity: sha512-qG9GUKUMpnyD5vU+wNGFNsVDxuSdmYDaCEsScPNPIiplzfNSS7VZk1G2yQ2tgXz6KjFncdaqJPuDehFqFy/gjQ==}
+  '@next/mdx@16.0.10':
+    resolution: {integrity: sha512-i2DXv8Ga+BXvo7XlHhgutnguH9a5Txix3j760RlKctZ22yXHhYhXsie1UCouEff4mxY04nVS+Bz6Jbaq9N+w0g==}
     peerDependencies:
       '@mdx-js/loader': '>=0.15.0'
       '@mdx-js/react': '>=0.15.0'
@@ -2778,7 +2778,7 @@ snapshots:
 
   '@next/env@16.0.10': {}
 
-  '@next/mdx@15.5.9(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@18.3.27)(react@19.2.3))':
+  '@next/mdx@16.0.10(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@18.3.27)(react@19.2.3))':
     dependencies:
       source-map: 0.7.6
     optionalDependencies:
