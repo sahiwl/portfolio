@@ -18,7 +18,7 @@ const allProjects : ProjectTypeShiArr = [
     {
         name: "SoundLog",
         description: "Welcome to Soundlog, the ultimate social network and music tracking app for album lovers! Inspired by the concept of Letterboxd, Soundlog is your personal space to log, review, and share your album experiences with the world. Whether you're a casual listener or a hardcore audiophile, Soundlog is here to celebrate your love for albums and the stories they tell.",
-        appLink: "https://soundlog.sahiwl.live",
+        appLink: "https://soundlog.sahiwl.me",
         gitLink: "https://github.com/sahiwl/soundlog",
         image: "/soundlog.jpg",
         skills: [
@@ -51,7 +51,7 @@ const allProjects : ProjectTypeShiArr = [
     {
         name: "Readily",
         description: "Readly is an eCommerce web app where users can explore a wide library of books, add them to their cart, and place orders to have them delivered to their address. It features a smooth shopping experience with user authentication, detailed book pages, and order tracking — making it easy to discover, buy, and enjoy your next read.",
-        appLink: "https://sahiwl-readily.vercel.app/",
+        appLink: "https://readily.sahiwl.me/",
         gitLink: "https://github.com/sahiwl/readily",
         image: "/Readily.png",
         skills: [
@@ -85,7 +85,7 @@ const allProjects : ProjectTypeShiArr = [
         name: "Portfolio Website",
         description: "This portfolio website showcases my  my projects, skills, and experience as a web developer. Visitors can explore featured work, learn about the technologies I use, and easily access my GitHub or contact me for collaboration.",
         appLink: "https://sahiwl.vercel.app/",
-        gitLink: "https://github.com/sahiwl/website",
+        gitLink: "https://github.com/sahiwl/portfolio",
         image: "/portWeb.png",
         skills: [
             {
