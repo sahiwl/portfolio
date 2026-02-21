@@ -16,6 +16,39 @@ export type ProjectTypeShiArr = ProjectTypeShi[];
 
 const allProjects : ProjectTypeShiArr = [
     {
+        name: "Pocketly",
+        description: "Your personal knowledge base and bookmark manager. Save important links, organize them with tags, preview rich content at a glance, and share curated collections with anyone through a simple URL. Think of it as a second brain for all the interesting stuff you find on the internet.",
+        appLink: "https://pocketly.sahiwl.me",
+        gitLink: "https://github.com/sahiwl/pocketly",
+        image: "/pocketly.png",
+        skills: [
+            {
+                name: "React",
+                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+            },
+            {
+                name: "TypeScript",
+                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+            },
+            {
+                name: "Spring Boot",
+                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+            },
+            {
+                name: "PostgreSQL",
+                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg"
+            },
+            {
+                name: "Java",
+                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+            },
+            {
+                name: "Tailwind",
+                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+            }
+        ]
+    },
+    {
         name: "SoundLog",
         description: "Welcome to Soundlog, the ultimate social network and music tracking app for album lovers! Inspired by the concept of Letterboxd, Soundlog is your personal space to log, review, and share your album experiences with the world. Whether you're a casual listener or a hardcore audiophile, Soundlog is here to celebrate your love for albums and the stories they tell.",
         appLink: "https://soundlog.sahiwl.me",

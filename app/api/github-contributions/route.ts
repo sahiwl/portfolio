@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url);
+  const yearParam = searchParams.get('year');
+
   const query = `
     query ($username: String!, $from: DateTime!, $to: DateTime!) {
       user(login: $username) {
@@ -21,8 +24,24 @@ export async function GET() {
   `;
 
   const username = "sahiwl";
-  const from = new Date(new Date().setFullYear(new Date().getFullYear() - 1)).toISOString();
-  const to = new Date().toISOString();
+
+  let from: string;
+  let to: string;
+
+  if (yearParam) {
+    const year = parseInt(yearParam, 10);
+    from = new Date(year, 0, 1).toISOString();
+    const now = new Date();
+    // If the requested year is the current year or future, cap `to` at now
+    if (year >= now.getFullYear()) {
+      to = now.toISOString();
+    } else {
+      to = new Date(year, 11, 31, 23, 59, 59).toISOString();
+    }
+  } else {
+    from = new Date(new Date().setFullYear(new Date().getFullYear() - 1)).toISOString();
+    to = new Date().toISOString();
+  }
 
   try {
     const response = await fetch("https://api.github.com/graphql", {
