@@ -24,10 +24,6 @@ export const allSkills : SkillArr = [
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
     },
     {
-        name: "GraphQL",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain-wordmark.svg"
-    },
-    {
         name: "Git",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
     },
@@ -48,16 +44,8 @@ export const allSkills : SkillArr = [
         src:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg"
     },
     {
-        name: "DaisyUI",
-        src: "https://raw.githubusercontent.com/saadeghi/daisyui-images/master/images/daisyui-logo/favicon-192.png"
-    },
-    {
         name: "TailwindCSS",
         src:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-    },
-    {
-        name: "MaterialUI",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg"
     },
     {
         name: "Bash",
@@ -72,8 +60,8 @@ export const allSkills : SkillArr = [
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
     },
     {
-        name: "Cloudflare",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg"
+        name: "Spring Boot",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
     },
     {
         name: "Python",

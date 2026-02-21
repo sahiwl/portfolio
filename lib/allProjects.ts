@@ -64,8 +64,12 @@ const allProjects : ProjectTypeShiArr = [
                 name: "Zustand"
             },
             {
-                name: "DaisyUI",
-                url: "https://raw.githubusercontent.com/saadeghi/daisyui-images/master/images/daisyui-logo/favicon-192.png"
+                name: "Tailwind",
+                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+            },
+            {
+                name: "Gemini ",
+                url: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Google_Gemini_icon_2025.svg"
             },
             {
                 name: "MongoDB",

@@ -2,6 +2,7 @@ import "@fontsource/proza-libre";
 import { Skills } from "@/components/sections/Skills";
 import Welcome from "@/components/sections/Welcome";
 import ContributionGraph from "@/components/sections/Contributions";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <div className="py-16">
           <Skills />
         </div>
+
+        <Contact />
       </div>
     </main>
   );
