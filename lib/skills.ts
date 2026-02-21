@@ -1,5 +1,3 @@
-import { ImgProps } from "next/dist/shared/lib/get-img-props";
-
 export type Skills = {
     name: string,
     src: string

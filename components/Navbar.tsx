@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { FiHeadphones, FiSun } from "react-icons/fi";
 import { PiMoonFill } from "react-icons/pi";
 import { LuUser } from "react-icons/lu";
-import { GrHomeRounded } from "react-icons/gr";
 import { IoIosLink } from "react-icons/io";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { MobileNav } from "./MobileNavbar";
@@ -59,11 +58,10 @@ export const Navbar = function () {
   useEffect(() => {
     setMounted(true);
   }, []);
-  console.log(`theme is ${theme}`);
-    return (
+  return (
     <>
       {/* Mobile Navbar (visible only on small screens) */}
-      <MobileNav/>
+      <MobileNav />
 
       {/* Old Navbar (visible only on medium and larger screens) */}
       <div className="hidden md:block">
@@ -84,7 +82,7 @@ export const Navbar = function () {
                     {isOpen ? <X /> : <Menu />}
                   </button>
                 </div>
-              </nav>  
+              </nav>
               <div className="">
                 {mounted === true && (
                   <button
@@ -108,5 +106,5 @@ export const Navbar = function () {
         </article>
       </div>
     </>
-    )
-  }
+  )
+}

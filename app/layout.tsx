@@ -16,12 +16,12 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Sahil Kumar Ray",
   description: "Full stack developer and oss enthusiast. Building web applications, learning and experimenting with new tech over time.",
-  keywords: ["sahiwl", "sahil kumar ray", "sahiwl portfolio", "sahiwl.live", "Sahil Kumar Ray"],
-  authors: [{ name: "Sahil Kumar Ray", url: "https://sahiwl.live" }],
+  keywords: ["sahiwl", "sahil kumar ray", "sahiwl portfolio", "sahiwl.me", "Sahil Kumar Ray"],
+  authors: [{ name: "Sahil Kumar Ray", url: "https://sahiwl.me" }],
   openGraph: {
     title: "Sahil Kumar Ray",
     description: "Full stack developer and oss enthusiast.",
-    url: "https://sahiwl.live",
+    url: "https://sahiwl.me",
     siteName: "Sahil Kumar Ray (sahiwl)",
     images: [
       {
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
       },
     ],
     type: "website",
-  }, 
+  },
   creator: 'Sahil Kumar Ray',
-  metadataBase: new URL('https://yourdomain.com'),
+  metadataBase: new URL('https://sahiwl.me'),
 };
 
 export default function RootLayout({
@@ -48,8 +48,8 @@ export default function RootLayout({
       suppressHydrationWarning={true}
       className={`${sometypemono.variable} ${inter.variable} ${exo2.variable} ${sono.variable} ${spacegrotesk.variable} scroll-smooth`}
     >
-     <head>
-     <Script defer src="https://cloud.umami.is/script.js" data-website-id="01c0c44d-373a-42de-902e-f8aecd113c0e"></Script>
+      <head>
+        <Script defer src="https://cloud.umami.is/script.js" data-website-id="01c0c44d-373a-42de-902e-f8aecd113c0e"></Script>
       </head>
       <body className="font-sometypemono dark:bg-zinc-900 bg-[#eae5db]">
         <ThemeProvider
@@ -69,13 +69,13 @@ export default function RootLayout({
               easing="ease"
               speed={200}
               shadow="0 0 10px #2299DD,0 0 5px #2299DD"
-              />
+            />
             <Navbar />
             <MobileNav />
             <Cursor />
-              <ThemedParticles className="fixed inset-0 -z-10 pointer-events-none"/>
+            <ThemedParticles className="fixed inset-0 -z-10 pointer-events-none" />
             {children}
-            <Analytics/>
+            <Analytics />
           </main>
         </ThemeProvider>
       </body>
