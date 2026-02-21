@@ -1,82 +1,81 @@
 "use client";
-import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-type MousePosition = [number, number];
+type CatState = "idle" | "walking-right" | "walking-left";
+
 export default function Cursor() {
-  const [mousePos, setMousePos] = useState<MousePosition>([0, 0]);
+  const [catPos, setCatPos] = useState({ x: 100, y: 100 });
+  const [catState, setCatState] = useState<CatState>("idle");
+  const catPosRef = useRef({ x: 100, y: 100 });
+  const mousePosRef = useRef({ x: 0, y: 0 });
+  const [isVisible, setIsVisible] = useState(false);
 
-  const [mouseVariant, setMouseVariant] = useState<"default" | "hover">(
-    "default"
-  );
-
-  const [size, setSize] = useState<number>(6);
-
-  // Handling mouse movement and setting the mouse position
+  // Track mouse position
   useEffect(() => {
-    const mouseMove = (e: MouseEvent) => {
-      setMousePos([e.clientX, e.clientY]);
+    const handleMouse = (e: MouseEvent) => {
+      mousePosRef.current = { x: e.clientX, y: e.clientY };
+      if (!isVisible) setIsVisible(true);
     };
 
-    window.addEventListener("mousemove", mouseMove);
-    return () => {
-      window.removeEventListener("mousemove", mouseMove);
+    window.addEventListener("mousemove", handleMouse);
+    return () => window.removeEventListener("mousemove", handleMouse);
+  }, [isVisible]);
+
+  // Animate cat walking toward mouse
+  useEffect(() => {
+    let animFrame: number;
+    const speed = 4.5;
+    const stopDistance = 25;
+
+    const tick = () => {
+      const cat = catPosRef.current;
+      const mouse = mousePosRef.current;
+      const dx = mouse.x - cat.x;
+      const dy = mouse.y - cat.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist > stopDistance) {
+        const newX = cat.x + (dx / dist) * speed;
+        const newY = cat.y + (dy / dist) * speed;
+        catPosRef.current = { x: newX, y: newY };
+        setCatPos({ x: newX, y: newY });
+        setCatState(dx > 0 ? "walking-right" : "walking-left");
+      } else {
+        setCatState("idle");
+      }
+
+      animFrame = requestAnimationFrame(tick);
     };
+
+    animFrame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animFrame);
   }, []);
 
-  // Handling mouse down and mouse up to change cursor size
-  useEffect(() => {
-    const mouseDown = () => setSize(12);
-    const mouseUp = () => setSize(6);
+  if (!isVisible) return null;
 
-    window.addEventListener("mousedown", mouseDown);
-    window.addEventListener("mouseup", mouseUp);
-    return () => {
-      window.removeEventListener("mousedown", mouseDown);
-      window.removeEventListener("mouseup", mouseUp);
-    };
-  }, []);
-
-  // Defining cursor variants for default and hover states
-  const cursorVariants = {
-    default: {
-      x: mousePos[0] - size * 2,
-      y: mousePos[1] - size * 2,
-      height: size * 4,
-      width: size * 4,
-      background: "transparent",
-      transition: {
-        type: "spring", // Use "spring" for more natural, smooth motion
-        damping: 10, // Controls how quickly the cursor reaches the target
-        stiffness: 100, // Controls the speed of the spring (higher is faster)
-        mass: 1, // Controls the bounciness
-        duration: 0.9, // Increase this to slow down the cursor's following speed
-      },
-    },
-    hover: {
-      x: mousePos[0] - size * 8,
-      y: mousePos[1] - size * 8,
-      height: size * 16,
-      width: size * 16,
-      backgroundColor: "red",
-      transition: {
-        type: "spring", // Use "spring" for more natural, smooth motion
-        damping: 10, // Controls how quickly the cursor reaches the target
-        stiffness: 100, // Controls the speed of the spring (higher is faster)
-        mass: 1, // Controls the bounciness
-        duration: 0.9, // Increase this to slow down the cursor's following speed
-      },
-    },
-  };
+  const isWalking = catState !== "idle";
+  const flipX = catState === "walking-left";
+  const gifSrc = isWalking ? "/cat/black_walk_8fps.gif" : "/cat/black_idle_8fps.gif";
 
   return (
-    <motion.div
-      className={`cursor border-2 dark:border-slate-400 border-yellow-800
-                rounded-full fixed top-0  left-0 select-none
-                z-50 touch-none pointer-events-none
-                ${mouseVariant === "hover"}`}
-      variants={cursorVariants}
-      animate={mouseVariant}
-    />
+    <div
+      className="fixed top-0 left-0 z-50 pointer-events-none select-none"
+      style={{
+        transform: `translate(${catPos.x - 32}px, ${catPos.y - 32}px)`,
+        willChange: "transform",
+      }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={gifSrc}
+        alt=""
+        width={64}
+        height={64}
+        style={{
+          imageRendering: "pixelated",
+          transform: flipX ? "scaleX(-1)" : "none",
+        }}
+      />
+    </div>
   );
 }
