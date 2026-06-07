@@ -60,12 +60,12 @@ const allProjects : ProjectTypeShiArr = [
                 name:"React"
             },
             {
-                url: "https://repository-images.githubusercontent.com/180328715/fca49300-e7f1-11ea-9f51-cfd949b31560",
-                name: "Zustand"
+                name: "TypeScript",
+                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
             },
             {
-                name: "Tailwind",
-                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                url: "https://repository-images.githubusercontent.com/180328715/fca49300-e7f1-11ea-9f51-cfd949b31560",
+                name: "Zustand"
             },
             {
                 name: "Gemini ",
@@ -85,39 +85,39 @@ const allProjects : ProjectTypeShiArr = [
             },
         ]
     },
-    {
-        name: "Readily",
-        description: "Readly is an eCommerce web app where users can explore a wide library of books, add them to their cart, and place orders to have them delivered to their address. It features a smooth shopping experience with user authentication, detailed book pages, and order tracking — making it easy to discover, buy, and enjoy your next read.",
-        appLink: "https://readily.sahiwl.me/",
-        gitLink: "https://github.com/sahiwl/readily",
-        image: "/Readily.png",
-        skills: [
-            {
-                name:"React",
-                url:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-            },
-            {
-                name: "Redux",
-                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
-            },
-            {
-                name: "MongoDB",
-                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-            },
-            {
-                name: "Node.js",
-                url:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
-            },
-            {
-                name: "Express",
-                url:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
-            },
-            {
-                name: "Tailwind",
-                url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-            }  
-        ]
-    },
+    // {
+    //     name: "Readily",
+    //     description: "Readly is an eCommerce web app where users can explore a wide library of books, add them to their cart, and place orders to have them delivered to their address. It features a smooth shopping experience with user authentication, detailed book pages, and order tracking — making it easy to discover, buy, and enjoy your next read.",
+    //     appLink: "https://readily.sahiwl.me/",
+    //     gitLink: "https://github.com/sahiwl/readily",
+    //     image: "/Readily.png",
+    //     skills: [
+    //         {
+    //             name:"React",
+    //             url:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    //         },
+    //         {
+    //             name: "Redux",
+    //             url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+    //         },
+    //         {
+    //             name: "MongoDB",
+    //             url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+    //         },
+    //         {
+    //             name: "Node.js",
+    //             url:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+    //         },
+    //         {
+    //             name: "Express",
+    //             url:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+    //         },
+    //         {
+    //             name: "Tailwind",
+    //             url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+    //         }  
+    //     ]
+    // },
     {
         name: "Portfolio Website",
         description: "This portfolio website showcases my  my projects, skills, and experience as a web developer. Visitors can explore featured work, learn about the technologies I use, and easily access my GitHub or contact me for collaboration.",
